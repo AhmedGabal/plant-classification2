@@ -7,6 +7,7 @@ from sklearn.preprocessing import LabelBinarizer
 import cv2
 import os
 from keras.models import load_model
+from keras import backend as K
 app = flask.Flask(__name__)
 
 @app.route('/', methods = ['GET', 'POST'])
@@ -22,6 +23,8 @@ def classify():
 			timestr = time.strftime("%Y%m%d-%H%M%S")
 			savedFile = timestr+'_'+filename
 			imagefile.save(savedFile)
+		#Before prediction
+		K.clear_session()
 		model= load_model('Model_2019-12-01.h5',compile=False)
 		labels=['Grape___Leaf_blight_(Isariopsis_Leaf_Spot)','Grape___Black_rot', 'Grape___Esca_(Black_Measles)',
 				'Grape___healthy',
@@ -54,5 +57,6 @@ def classify():
 		# 	'propability': propability, 
 		# 	'label': result
 		# } 
+		K.clear_session()
 		return result; 
 app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 33507)), debug=True)

@@ -3,4 +3,5 @@ werkzeug==0.16.0
 numpy==1.17.4
 sklearn
 opencv-python
+opencv-python-headless
 keras==2.2.5

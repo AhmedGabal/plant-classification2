@@ -38,7 +38,7 @@ def classify():
 		lb= LabelBinarizer()
 		labels=lb.fit_transform(labels)
 		#2nd capture image:
-		im_size=110
+		im_size=150
 		img = cv2.imread(savedFile)
 		imgResize=cv2.resize(img, (im_size, im_size))
 		x=np.array(imgResize)/255.0

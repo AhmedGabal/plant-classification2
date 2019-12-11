@@ -5,3 +5,4 @@ sklearn
 opencv-python
 opencv-python-headless
 keras==2.2.5
+tensorflow

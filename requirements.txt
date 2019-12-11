@@ -4,6 +4,4 @@ numpy
 sklearn
 opencv-python
 keras
-libsm6
-libxext6
-libxrender-dev
+libsm6 libxext6 libxrender-dev

@@ -1,0 +1,6 @@
+flask
+werkzeug
+numpy
+sklearn
+opencv-python
+keras

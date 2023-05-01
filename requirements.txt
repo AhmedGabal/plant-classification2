@@ -1,4 +1,4 @@
-flask==1.1.1
+flask==2.3.2
 werkzeug==0.16.0
 numpy==1.17.4
 sklearn
